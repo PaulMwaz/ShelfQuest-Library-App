@@ -1,17 +1,23 @@
-import aboutImage from "../images/AboutUs.jpg";
-
 const AboutPage = () => {
   return `
-        <div class="about_content">
-            <h2>About ShelfQuest Digital Library</h2>
-            <div class="about_image_container">
-                <img src="${aboutImage}" alt="About ShelfQuest" class="about_image">
-            </div>
-            <p class="about_text">
-               ShelfQuest Digital Library is a one-stop platform for seamless access to a wide range of digital resources, including academic, entertainment, and self-development content.ShelfQuest is your one-stop digital library.
-            </p>
-        </div>
-    `;
+    <section class="about_page_container">
+      <div class="about_content_box">
+        <h1>About ShelfQuest</h1>
+        <p>
+          At ShelfQuest, we are on a mission to make knowledge accessible to all. 
+          Whether you're a student, teacher, or lifelong learner, our platform offers a curated library 
+          of digital resources designed to inspire, educate, and empower.
+        </p>
+        <p>
+          With a commitment to innovation and inclusivity, ShelfQuest provides seamless access to 
+          academic, inspirational, and self-development content—anytime, anywhere.
+        </p>
+        <p>
+          Join a growing global community of readers who trust ShelfQuest to fuel their learning journey.
+        </p>
+      </div>
+    </section>
+  `;
 };
 
 export default AboutPage;
