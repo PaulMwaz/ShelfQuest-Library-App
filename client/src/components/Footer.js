@@ -13,7 +13,7 @@ const Footer = () => {
             <h4>Contact</h4>
             <p>P.O. Box 45678<br/>Nairobi, Kenya</p>
             <p><a href="mailto:support@shelfquest.org">support@shelfquest.org</a></p>
-            <p>+254 712 345678</p>
+            <p>+254 719-387-156</p>
           </div>
           <div class="footer-links">
             <h4>Quick Links</h4>
