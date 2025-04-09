@@ -1,25 +1,28 @@
 const RegisterPage = () => {
-  return `
-        <div class="register_wrapper">
-            <div class="register_box">
-                <h2>Register</h2>
-                <form id="registerForm">
-                    <div class="input_group">
-                        <input type="text" id="registerUsername" placeholder="Username" required>
-                    </div>
-                    <div class="input_group">
-                        <input type="email" id="registerEmail" placeholder="Email" required>
-                    </div>
-                    <div class="input_group">
-                        <input type="password" id="registerPassword" placeholder="Password" required>
-                    </div>
-                    <div class="input_group">
-                        <button type="submit">Register</button>
-                    </div>
-                </form>
-            </div>
+  const div = document.createElement("div");
+  div.classList.add("auth_wrapper");
+
+  div.innerHTML = `
+    <div class="auth_box">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <div class="input_group">
+          <input type="text" id="registerUsername" placeholder="Username" required />
         </div>
-    `;
+        <div class="input_group">
+          <input type="email" id="registerEmail" placeholder="Email" required />
+        </div>
+        <div class="input_group">
+          <input type="password" id="registerPassword" placeholder="Password" required />
+        </div>
+        <div class="input_group">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  `;
+
+  return div;
 };
 
 const setupRegister = () => {

@@ -363,3 +363,143 @@ footer {
     padding: 20px;
   }
 }
+/* 📥 Footer Section */
+.footer {
+  background: linear-gradient(to right, #111827, #1f2937);
+  color: #ffffff;
+  padding: 60px 20px 30px;
+  font-size: 0.95rem;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-contact,
+.footer-links {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-contact h4,
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-contact p,
+.footer-about p,
+.footer-links ul {
+  margin: 5px 0;
+  color: #d1d5db;
+}
+
+.footer-contact a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #374151;
+  color: #9ca3af;
+}
+/* 🔐 Auth Wrapper Styling */
+.auth_wrapper {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 40px 20px;
+}
+
+/* 📦 Auth Box Styling */
+.auth_box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth_box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* 💡 Input Groups */
+.input_group {
+  margin-bottom: 16px;
+}
+
+.input_group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input_group input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* 🚀 Button Styling */
+.input_group button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input_group button:hover {
+  background-color: #1d4ed8;
+}
