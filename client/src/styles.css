@@ -122,14 +122,23 @@ body {
 /* 📘 About Preview (on Home) */
 .about_preview {
   background-size: cover;
-  background-position: center;
-  height: 80vh;
+  background-position: center top; /* Show heads */
+  width: 100%;
+  aspect-ratio: 16 / 6; /* 🌟 Ensures image looks good on desktop */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  position: relative;
 }
 
+@media (max-width: 768px) {
+  .about_preview {
+    aspect-ratio: unset;
+    min-height: 400px;
+    height: auto;
+  }
+}
 .overlay_box {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
