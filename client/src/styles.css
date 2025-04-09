@@ -68,7 +68,7 @@ body {
 /* 🏠 Hero Slideshow */
 .fullscreen-slideshow {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -78,7 +78,6 @@ body {
   width: 100%;
   height: 100%;
   display: none;
-  object-fit: cover;
   z-index: 1;
 }
 
@@ -109,22 +108,23 @@ body {
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
+  color: white;
+  padding: 20px;
 }
 
 .overlay-text {
-  color: white;
   font-size: 2.5rem;
   font-weight: bold;
   text-shadow: 2px 2px 8px #000;
   max-width: 90%;
 }
 
-/* 📘 About Preview (on Home) */
+/* 📘 About Preview */
 .about_preview {
   background-size: cover;
-  background-position: center top; /* Show heads */
+  background-position: center;
   width: 100%;
-  aspect-ratio: 16 / 6; /* 🌟 Ensures image looks good on desktop */
+  aspect-ratio: 16/6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,13 +132,6 @@ body {
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .about_preview {
-    aspect-ratio: unset;
-    min-height: 400px;
-    height: auto;
-  }
-}
 .overlay_box {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
@@ -258,7 +251,7 @@ body {
   color: #1f2937;
 }
 
-/* 🌍 Mission / Team Section */
+/* 🌍 Team Section */
 .team_section {
   background-size: cover;
   background-position: center;
@@ -268,7 +261,7 @@ body {
   justify-content: center;
 }
 
-/* 📘 About Page (Standalone) */
+/* 📘 About Page */
 .about_page_container {
   background-color: #f3f4f6;
   padding: 80px 20px 100px;
@@ -301,78 +294,6 @@ body {
 }
 
 /* 📥 Footer */
-footer {
-  background-color: #1f2937;
-  color: white;
-  text-align: center;
-  padding: 25px 15px;
-  font-size: 0.9rem;
-  position: relative;
-  width: 100%;
-  margin-top: 60px;
-}
-
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
-  .nav_links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 40px;
-    right: 10px;
-    background-color: #1f2937;
-    width: auto;
-    padding: 10px 0;
-    gap: 5px;
-    border-radius: 8px;
-  }
-
-  .nav_links.active {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .fullscreen-slideshow,
-  .about_preview,
-  .team_section {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .overlay-text {
-    font-size: 1.8rem;
-  }
-
-  .overlay_box h3 {
-    font-size: 1.5rem;
-  }
-
-  .overlay_box p {
-    font-size: 1rem;
-  }
-
-  .testimonial_cards,
-  .value_section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about_content_box h1 {
-    font-size: 2rem;
-  }
-
-  .about_content_box p {
-    font-size: 1rem;
-  }
-
-  .about_content_box {
-    padding: 20px;
-  }
-}
-/* 📥 Footer Section */
 .footer {
   background: linear-gradient(to right, #111827, #1f2937);
   color: #ffffff;
@@ -450,7 +371,8 @@ footer {
   border-top: 1px solid #374151;
   color: #9ca3af;
 }
-/* 🔐 Auth Wrapper Styling */
+
+/* 🔐 Auth Section */
 .auth_wrapper {
   min-height: 70vh;
   display: flex;
@@ -460,7 +382,6 @@ footer {
   padding: 40px 20px;
 }
 
-/* 📦 Auth Box Styling */
 .auth_box {
   background-color: #ffffff;
   padding: 40px 30px;
@@ -477,7 +398,6 @@ footer {
   color: #1f2937;
 }
 
-/* 💡 Input Groups */
 .input_group {
   margin-bottom: 16px;
 }
@@ -496,7 +416,6 @@ footer {
   outline: none;
 }
 
-/* 🚀 Button Styling */
 .input_group button {
   width: 100%;
   padding: 12px;
@@ -511,4 +430,62 @@ footer {
 
 .input_group button:hover {
   background-color: #1d4ed8;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #1f2937;
+    width: auto;
+    padding: 10px 0;
+    gap: 5px;
+    border-radius: 8px;
+  }
+
+  .nav_links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .fullscreen-slideshow {
+    height: 60vh;
+  }
+
+  .overlay-text {
+    font-size: 1.8rem;
+  }
+
+  .overlay_box h3 {
+    font-size: 1.5rem;
+  }
+
+  .overlay_box p {
+    font-size: 1rem;
+  }
+
+  .testimonial_cards,
+  .value_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_content_box h1 {
+    font-size: 2rem;
+  }
+
+  .about_content_box p {
+    font-size: 1rem;
+  }
+
+  .about_content_box {
+    padding: 20px;
+  }
 }
