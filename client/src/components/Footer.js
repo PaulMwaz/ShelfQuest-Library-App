@@ -26,7 +26,8 @@ const Footer = () => {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 ShelfQuest. All rights reserved | Built with ❤️ for the world of learners.</p>
+            <span class="copyright">© 2025 ShelfQuest. All rights reserved</span>
+            <span class="built-with-love"> | Built with ❤️ for the world of learners.</span>
         </div>
       </footer>
     `;

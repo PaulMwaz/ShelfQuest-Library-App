@@ -50,12 +50,35 @@ body {
   border-radius: 6px;
 }
 
+/* 🍔 Hamburger Menu Icon */
 .menu-icon {
   display: none;
-  font-size: 30px;
-  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
   cursor: pointer;
-  margin-right: 20px;
+  z-index: 1100;
+}
+
+.menu-icon span {
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✖ Transform to X when active */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* 🔲 Content container */
@@ -122,9 +145,9 @@ body {
 /* 📘 About Preview */
 .about_preview {
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   width: 100%;
-  aspect-ratio: 16/6;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,16 +274,6 @@ body {
   color: #1f2937;
 }
 
-/* 🌍 Team Section */
-.team_section {
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* 📘 About Page */
 .about_page_container {
   background-color: #f3f4f6;
@@ -317,17 +330,10 @@ body {
   min-width: 250px;
 }
 
-.footer-about h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
+.footer-about h3,
 .footer-contact h4,
 .footer-links h4 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #ffffff;
+  color: white;
 }
 
 .footer-contact p,
@@ -370,9 +376,21 @@ body {
   padding-top: 30px;
   border-top: 1px solid #374151;
   color: #9ca3af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 4px;
+  }
 }
 
-/* 🔐 Auth Section */
+/* 🔐 Auth Styling */
 .auth_wrapper {
   min-height: 70vh;
   display: flex;
@@ -434,25 +452,25 @@ body {
 
 /* 📱 Responsive Styles */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
   .nav_links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 40px;
-    right: 10px;
+    top: 50px;
+    right: 0;
     background-color: #1f2937;
-    width: auto;
-    padding: 10px 0;
-    gap: 5px;
-    border-radius: 8px;
+    width: 200px;
+    padding: 15px 0;
+    border-bottom-left-radius: 12px;
+    z-index: 100;
   }
 
   .nav_links.active {
     display: flex;
-  }
-
-  .menu-icon {
-    display: block;
   }
 
   .fullscreen-slideshow {
@@ -483,9 +501,5 @@ body {
 
   .about_content_box p {
     font-size: 1rem;
-  }
-
-  .about_content_box {
-    padding: 20px;
   }
 }

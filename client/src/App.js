@@ -14,7 +14,7 @@ function navigateTo(page) {
     case "about":
       import("./pages/AboutPage.js")
         .then((module) => {
-          content.innerHTML = module.default(); // ✅ AboutPage still returns HTML string
+          content.innerHTML = module.default(); // ✅ HTML string
         })
         .catch((error) => console.error("Failed to load AboutPage:", error));
       break;
@@ -22,7 +22,7 @@ function navigateTo(page) {
     case "library":
       import("./pages/LibraryPage.js")
         .then((module) => {
-          content.innerHTML = module.LibraryPage(); // ✅ LibraryPage returns HTML string
+          content.innerHTML = module.LibraryPage(); // ✅ HTML string
           module.setupLibrary();
         })
         .catch((error) => console.error("Failed to load LibraryPage:", error));
@@ -31,7 +31,7 @@ function navigateTo(page) {
     case "login":
       import("./pages/LoginPage.js")
         .then((module) => {
-          content.appendChild(module.LoginPage()); // ✅ LoginPage returns DOM element
+          content.appendChild(module.LoginPage()); // ✅ DOM element
           module.setupLogin();
         })
         .catch((error) => console.error("Failed to load LoginPage:", error));
@@ -40,7 +40,7 @@ function navigateTo(page) {
     case "register":
       import("./pages/RegisterPage.js")
         .then((module) => {
-          content.appendChild(module.RegisterPage()); // ✅ RegisterPage returns DOM element
+          content.appendChild(module.RegisterPage()); // ✅ DOM element
           module.setupRegister();
         })
         .catch((error) => console.error("Failed to load RegisterPage:", error));
@@ -51,7 +51,9 @@ function navigateTo(page) {
   }
 }
 
-function toggleMenu() {
+// ✅ Updated toggleMenu to handle icon animation
+function toggleMenu(icon) {
+  icon.classList.toggle("active");
   const navLinks = document.querySelector(".nav_links");
   navLinks.classList.toggle("active");
 }
@@ -65,6 +67,8 @@ const App = () => {
   navigateTo("home");
 };
 
+// ✅ Expose globally
 window.navigateTo = navigateTo;
 window.toggleMenu = toggleMenu;
+
 export default App;
